@@ -83,4 +83,4 @@ tolerations: []
 affinity: {}
 
 apiSecretName: api-key
-apikey: ****************************
+apikey: ""
