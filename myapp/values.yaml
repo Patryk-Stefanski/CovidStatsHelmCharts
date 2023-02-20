@@ -8,7 +8,7 @@ image:
   repository: pstefans/covidstats
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1.0.0
+  tag: 0237dee8197f7335def50a08d35869f8380ee47c
 
 imagePullSecrets: []
 nameOverride: ""
