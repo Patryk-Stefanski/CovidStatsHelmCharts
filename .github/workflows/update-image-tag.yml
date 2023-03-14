@@ -1,0 +1,21 @@
+name: Update Image Tag
+
+on:
+  repository_dispatch:
+    types: new-image-tag
+
+jobs:
+  test-update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update values.yaml
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          repository: "Patryk-Stefanski/CovidStatsHelmCharts"
+          valueFile: 'myapp/values.yaml'
+          propertyPath: '.image.tag'
+          value: ${{ github.event.client_payload.sha }}
+          commitChange: true
+          message: 'Updated image version to ${{ github.event.client_payload.sha }}'
+          token: ${{ secrets.PAT }}
