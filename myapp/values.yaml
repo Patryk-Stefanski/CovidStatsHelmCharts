@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: pstefans/covidstats
   pullPolicy: Always
-  tag: 8ef6ae36720c1db1d0aaacc506a327244f3c4ec9
+  tag: 1074b3d597360bade5c740e0088ccb998a66fc9b
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
